@@ -43,4 +43,4 @@ then
 fi
 
 # Run the application
-docker run --rm -d -p 8081:8081 -e ZIPKIN_URL=http://192.168.33.16:9411/api/v2/spans -e JWT_SECRET=PRFT -e AUTH_API_PORT=8081 -e USERS_API_ADDRESS=http://192.168.33.10:8083 auth-api
+docker run --rm -d -p 8081:8081 -e ZIPKIN_URL=http://10.0.2.7:9411/api/v2/spans -e JWT_SECRET=PRFT -e AUTH_API_PORT=8081 -e USERS_API_ADDRESS=http://10.0.2.5:8083 auth-api

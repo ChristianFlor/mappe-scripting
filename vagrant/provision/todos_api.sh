@@ -41,4 +41,4 @@ then
 fi
 
 # Run the application
-docker run --rm -d -p 8082:8082 -e ZIPKIN_URL=http://192.168.33.16:9411/api/v2/spans -e JWT_SECRET=PRFT -e TODO_API_PORT=8082 -e REDIS_HOST=192.168.33.15 -e REDIS_PORT=6379 -e REDIS_CHANNEL=log_channel todos-api
+docker run --rm -d -p 8082:8082 -e ZIPKIN_URL=http://10.0.2.7:9411/api/v2/spans -e JWT_SECRET=PRFT -e TODO_API_PORT=8082 -e REDIS_HOST=dev-prft-eastus-redisDBPublic.redis.cache.windows.net -e REDIS_PORT=6379 -e REDIS_CHANNEL=log_channel todos-api

@@ -41,5 +41,5 @@ then
 fi
 
 # Run the application
-docker run --rm -d -p 8083:8083 -e SPRING_ZIPKIN_BASE_URL=http://192.168.33.16:9411 -e JWT_SECRET=PRFT -e SERVER_PORT=8083 users-api
+docker run --rm -d -p 8083:8083 -e SPRING_ZIPKIN_BASE_URL=http://10.0.2.7:9411 -e JWT_SECRET=PRFT -e SERVER_PORT=8083 users-api
 

@@ -41,5 +41,5 @@ then
 fi
 
 # Run the application
-docker run --rm -d -p 8080:8080 -e ZIPKIN_URL=http://192.168.33.16:9411/api/v1/spans -e REDIS_HOST=192.168.33.15 -e REDIS_PORT=6379 -e REDIS_CHANNEL=log_channel log-message-processor
+docker run --rm -d -p 8080:8080 -e ZIPKIN_URL=http://10.0.2.7:9411/api/v1/spans -e REDIS_HOST=dev-prft-eastus-redisDBPublic.redis.cache.windows.net -e REDIS_PORT=6379 -e REDIS_CHANNEL=log_channel log-message-processor
 
