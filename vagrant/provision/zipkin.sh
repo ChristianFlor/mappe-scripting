@@ -17,9 +17,6 @@ then
     sudo apt-get install -y docker-ce docker-ce-cli containerd.io
     sudo usermod -aG docker $USER
 
-    sudo reboot
-
-    sleep 30
 fi
 
 if [["$(systemctl is-active docker)" != "active"]]
