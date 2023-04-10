@@ -1,0 +1,40 @@
+{
+    "builders": [{
+      "type": "azure-arm",
+  
+      "client_id": "6faff2da-86fc-459a-bcb5-594be788c2e7",
+      "client_secret": "9zj8Q~fze5LRohqju3NO3PYbzTm~O.6EVRfWbaeR",
+      "tenant_id": "84c31ca0-ac3b-4eae-ad11-519d80233e6f",
+      "subscription_id": "3d6b57b0-c7bf-4a64-a206-80ab563622db",
+  
+      "managed_image_resource_group_name": "dev-prft-eastus-rg",
+      "managed_image_name": "dev-prft-eastus-rg",
+  
+      "os_type": "Linux",
+      "image_publisher": "Canonical",
+      "image_offer": "UbuntuServer",
+      "image_sku": "16.04-LTS",
+  
+      "azure_tags": {
+          "dept": "PRFT",
+          "task": "Image deploy log_processor"
+      },
+  
+      "location": "East US",
+      "vm_size": "Standard_F2",
+
+      "communicator": "ssh",
+      "ssh_username": "packer",
+      "ssh_password": "packer"
+    }],
+    
+    "provisioners": [{
+        "type": "file",
+        "source": "log_processor.sh",
+        "destination": "./"
+    },{
+        "type": "shell",
+        "script": "log_processor.sh"
+   
+    }]
+  }
