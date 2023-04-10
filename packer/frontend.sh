@@ -39,4 +39,4 @@ then
 fi
 
 # Run the application
-docker run --rm -d -p 80:80 -e PORT=80 -e ZIPKIN_URL=http://10.0.2.7:9411/api/v2/spans -e AUTH_API_ADDRESS=http://10.0.2.8:8081 -e TODOS_API_ADDRESS=http://10.0.2.10:8082 frontend
+docker run --rm -d -p 80:80 -e PORT=80 -e ZIPKIN_URL=http://10.0.2.7:9411/api/v2/spans -e AUTH_API_ADDRESS=http://10.0.2.10:8081 -e TODOS_API_ADDRESS=http://10.0.2.9:8082 frontend
